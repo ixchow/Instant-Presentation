@@ -1,0 +1,11 @@
+A quick hack to auto-generate slides. Depends on cURL, wget, sox, and a recent imagemagick.
+
+Released into the public domain.
+
+
+Usage:
+./record.pl -- uses sox to record snippets of audio, which it moves to 'words.flac'
+./recognize.pl -- grabs any 'words.flac' and sends to google's speech-to-text API; writes 'utterance'
+./slidify.pl -- grabs any 'utterance' and uses google image search + some imagemagick to make a slide (slide.png)
+
+For my SIGBOVIK talk, I used a custom C++/SDL program to actually show 'slide.png'; this program is not included. However, pointing gqview (a nice image viewer) at slide.png seems to work equally well.
